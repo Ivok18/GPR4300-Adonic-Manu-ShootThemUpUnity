@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerAttackBehavior : MonoBehaviour
 {
-    private Gun[] guns;
+    private PlayerGun[] guns;
     private bool canShoot;
 
     // Start is called before the first frame update
     void Start()
     {
-        guns = GetComponentsInChildren<Gun>();
+        guns = GetComponentsInChildren<PlayerGun>();
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class PlayerAttackBehavior : MonoBehaviour
         if (canShoot)
         {
             canShoot = false;
-            foreach (Gun gun in guns)
+            foreach (PlayerGun gun in guns)
             {
                 gun.Shoot();
             }

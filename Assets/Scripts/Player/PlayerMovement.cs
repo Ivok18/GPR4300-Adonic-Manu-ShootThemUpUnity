@@ -31,4 +31,20 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(movement.x * sideSpeed, movement.y * forwardSpeed) * Time.fixedDeltaTime; 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("EnemyBullet"))
+        {
+            GetDamage(5);
+            Destroy(collision.gameObject);
+        }
+    }
+    
+
+    void GetDamage(float damage)
+    {
+
+    }
+    
 }
