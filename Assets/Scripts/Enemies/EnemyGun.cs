@@ -25,4 +25,6 @@ public class EnemyGun : MonoBehaviour
         _bullet.speed = enemyData.bulletsSpeed;
         bulletSprite.color = enemyData.color;        
     }
+
+   
 }

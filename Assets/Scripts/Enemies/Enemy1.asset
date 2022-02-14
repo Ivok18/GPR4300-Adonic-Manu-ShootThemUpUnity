@@ -15,5 +15,5 @@ MonoBehaviour:
   model: {fileID: 5739034139160560136, guid: 5224148d58dcc0c42b2a2b04c8e583a7, type: 3}
   speed: 1
   attackRate: 1.6
-  bulletsSpeed: 250
+  bulletsSpeed: 500
   color: {r: 0.7529412, g: 0.09019608, b: 0.17254902, a: 1}

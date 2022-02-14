@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    private GameObject playerTracker;
+    public GameObject playerTracker;
     [SerializeField] public float speed;
-   
+
 
     // Start is called before the first frame update
     void Start()
     {
         playerTracker = GameObject.FindGameObjectWithTag("PlayerTracker");
         speed = GetComponent<EnemyInfos>().enemyData.speed;
-       
+
     }
 
     // Update is called once per frame
@@ -25,14 +25,16 @@ public class EnemyMovement : MonoBehaviour
     {
         if (collision.transform.CompareTag("PlayerBullet"))
         {
-       
-            GetDamage(1);
+
+            GetDamage(2f);
             Destroy(collision.gameObject);
         }
     }
 
     void GetDamage(float damage)
     {
-
+        Health health = GetComponent<Health>();
+        health.GetDamage(damage);
+        
     }
 }

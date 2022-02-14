@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.transform.CompareTag("EnemyBullet"))
         {
-            GetDamage(5);
+            GetDamage(15f);
             Destroy(collision.gameObject);
         }
     }
@@ -44,7 +44,9 @@ public class PlayerMovement : MonoBehaviour
 
     void GetDamage(float damage)
     {
-
+        Health health = GetComponent<Health>();
+        health.GetDamage(damage);
+        
     }
     
 }
